@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Advanced Dictionary App</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Advanced Dictionary</h1>
+        <div class="input-container">
+            <input type="text" id="search-input" class="search-input" placeholder="Enter a word..." onkeyup="debounceSearch()">
+            <button id="search-btn" class="search-btn" onclick="searchWord()">
+                <i class="fa fa-search"></i> Search
+            </button>
+        </div>
+
+        <div id="loader" class="loader" style="display: none;"></div>
+
+        <div id="result" class="result" style="display: none;">
+            <h2 id="word"></h2>
+            <h4>Parts of Speech:</h4>
+            <p id="part-of-speech"></p>
+            <h4>Definition:</h4>
+            <p id="definition"></p>
+            <h4>Example:</h4>
+            <p id="example"></p>
+        </div>
+
+        <div id="error-message" class="error-message" style="display: none;">
+            <p>Sorry, the word could not be found. Please try again!</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
